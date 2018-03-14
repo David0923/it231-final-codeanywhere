@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>The Bestest Store Ever</h1>
+<h1>The Bestest Shoes</h1>
 
 
 <table class="w3-table-all">
@@ -15,7 +15,7 @@
   <tbody>
     <% @products.each do |product| %>
       <tr>
-        <td><%= product.title %></td>
+        <td><%= sanitize(product.title) %></td>
         <td><%= strip_tags(product.description) %></td>
         <td><%= image_tag(product.image_url) %>
         <%= number_to_currency(product.price) %>
